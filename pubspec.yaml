@@ -1,0 +1,50 @@
+name: smartrack
+description: Smartrack — Gestion de notes et bulletins anti-fraude
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+  # Appels HTTP vers le backend NestJS
+  http: ^1.2.1
+
+  # Stockage sécurisé du JWT sur l'appareil (chiffré nativement par l'OS)
+  flutter_secure_storage: ^9.2.2
+
+  # Petites préférences non sensibles (adresse IP du serveur choisie par l'utilisateur)
+  shared_preferences: ^2.2.3
+
+  # WebSocket pour les alertes temps réel (superviseurs, confirmations d'accès enseignants)
+  socket_io_client: ^2.0.3+1
+
+  # Gestion d'état simple (partage de l'utilisateur connecté à travers l'app)
+  provider: ^6.1.2
+
+  # Authentification biométrique locale (empreinte digitale)
+  local_auth: ^2.3.0
+
+  # Génération des icônes de l'application
+  flutter_launcher_icons: ^0.14.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/icone_carree.png
+
+# Configuration des icônes
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icone_carree.png"

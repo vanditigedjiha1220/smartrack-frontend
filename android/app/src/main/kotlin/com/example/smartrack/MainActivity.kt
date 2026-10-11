@@ -1,0 +1,4 @@
+package com.example.smartrack
+import io.flutter.embedding.android.FlutterFragmentActivity
+
+class MainActivity: FlutterFragmentActivity()
